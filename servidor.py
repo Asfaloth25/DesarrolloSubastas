@@ -19,6 +19,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         <body>
             <h1>Hola desde un servidor Python</h1>
             <p>Este es un servidor simple que responde a solicitudes GET.</p>
+            <img src=https://lh4.googleusercontent.com/Vrf5VUD-g3nJgSJc29YXKEJ7UomJhNi3qkXo6Cie6m-9Mq1GsluJJ6LC9_R2WCqd2_yAXN82MS9xhaTBV5n2OEQu485rPwFOiHdkh4F2ETeINj0Vwrl8e6loHOBy15d1n9L3CZ_8>
         </body>
         </html>"""
 
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     server_address = ("", 8000)  # Escucha en todas las interfaces en el puerto 8000
     httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
 
-    print("Servidor corriendo en el puerto 8000...")
+    print("Servidor corriendo en el puerto 8000...\nhttp://localhost:8000")
     try:
         httpd.serve_forever()  # Mantiene el servidor ejecutándose
     except KeyboardInterrupt:
