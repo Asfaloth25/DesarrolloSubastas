@@ -22,6 +22,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             <img src=https://lh4.googleusercontent.com/Vrf5VUD-g3nJgSJc29YXKEJ7UomJhNi3qkXo6Cie6m-9Mq1GsluJJ6LC9_R2WCqd2_yAXN82MS9xhaTBV5n2OEQu485rPwFOiHdkh4F2ETeINj0Vwrl8e6loHOBy15d1n9L3CZ_8>
         </body>
         </html>"""
+        
 
         # Escribir el contenido HTML en la respuesta
         self.wfile.write(html_content.encode("utf-8"))
