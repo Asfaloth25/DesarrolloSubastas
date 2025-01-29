@@ -1,0 +1,60 @@
+:root {
+    --gunmetal: #2d3142ff;
+    --paynes-gray: #4f5d75ff;
+    --silver: #bfc0c0ff;
+    --offwhite: rgb(221, 214, 195);
+    --coral: #ef8354ff;
+  }
+  
+body{
+    background-color:var(--paynes-gray);
+    font-family: "Consolas";
+}
+
+h1{
+    margin-top: 60px;
+    text-align: center;
+    color: var(--offwhite);
+}
+hr {
+    border: none; /* Remove the default border */
+    height: 3px; /* Set the thickness */
+    background-color: var(--offwhite);
+    width: 70%;
+    margin-left: 10%; /* Add spacing around the line */
+}
+
+input{
+    background-color: var(--offwhite);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--gunmetal);
+
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: var(--coral);
+  }
