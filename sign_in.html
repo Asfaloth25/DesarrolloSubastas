@@ -18,20 +18,21 @@
         <main>
             <h1>Sign in</h1>
             <hr>
-            <form action=""><!--Aquí iría el action para enviar el formulario...-->
+            <form action="", id="sign_in_form"><!--Aquí iría el action para enviar el formulario...-->
                 <fieldset>
-                    <legend>Sign in details</legend>
+                    <legend>Sign in details</legend><br>
                     <label for="username">Username</label><br>
-                    <input type="text" id="username" name="username"><br>
+                    <input type="text" id="username" name="username" placeholder="Jorge Enebral"><br><br>
                     <label for="birthdate">Date of birth:</label><br>
-                    <input type="date" id="birthdate" name="birthdate"><br>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
                     <label for="email">E-mail</label><br>
                     <!-- mail regex: ^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$ -->
-                    <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required><br>
+                    <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required placeholder="yourmail@mail.com"><br><br>
                     <label for="pword">Password</label><br>
-                    <input type="password" id="pword" name="pword"><br>
+                    <input type="password" id="pword" name="pword" placeholder="SafePassword1234"><br><br>
                     <label for="confirmpword">Confirm password</label><br>
-                    <input type="password" id="confirmpword" name="confirmpword"><br>
+                    <input type="password" id="confirmpword" name="confirmpword" placeholder="SafePassword1234"><br><br>
+                    <p id ="error_message" style="color: red; display: none;">Passwords are different</p>
                     <input type="submit" value="Sign in">
                     <input type="reset" value="Reset all fields">
                 </fieldset>

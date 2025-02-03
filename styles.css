@@ -11,6 +11,14 @@ body{
     font-family: "Consolas";
 }
 
+form{
+  color:var(--offwhite);
+}
+
+label{
+  color: var(--silver);
+}
+
 h1{
     margin-top: 60px;
     text-align: center;
