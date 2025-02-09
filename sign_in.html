@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
@@ -15,33 +15,54 @@
             </ul>
         </header>
         <main>
-            <h1>Sign in</h1>
+            <h1>Registro de usuario</h1>
             <hr>
             <form id="sign_in_form">
                 <fieldset>
-                    <legend>Sign in details</legend><br>
-                    <label for="username">Username</label><br>
+                    <legend>Detalles de creación de la cuenta</legend><br>
+                    <label for="username">Nombre de usuario</label><br>
                     <input type="text" id="username" name="username" placeholder="Jorge Enebral" required><br><br>
-                    <label for="birthdate">Date of birth:</label><br>
+                    <label for="birthdate">Día de nacimiento</label><br>
                     <input type="date" id="birthdate" name="birthdate" required><br><br>
                     <p id="birthdate_error_message" style="color: red; display: none;"></p>
                     <label for="email">E-mail</label><br>
                     <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9\._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required placeholder="yourmail@mail.com"><br><br>
-                    <label for="pword">Password</label><br>
+                    <label for="pword">Contraseña</label><br>
                     <input type="password" id="pword" name="pword" required placeholder="SafePassword1234">
                     <span id="togglePword" onclick="togglePasswordVisibility('pword', 'togglePword')">👁️</span><br><br>
-                    <label for="confirmpword">Confirm password</label><br>
+                    <label for="confirmpword">Confirmar contraseña</label><br>
                     <input type="password" id="confirmpword" name="confirmpword" required placeholder="SafePassword1234">
                     <span id="toggleConfPword" onclick="togglePasswordVisibility('confirmpword', 'toggleConfPword')">👁️</span><br><br>
-                    <p id="error_message" style="color: red; display: none;">Passwords are different</p>
+                    <p id="error_message" style="color: red; display: none;">Las contraseñas no encajan</p>
+                    
+                    <!-- Nueva sección para el DNI -->
+                    <label for="dni_photo">Sube una foto de tu DNI:</label><br>
+                    <input type="file" id="dni_photo" name="dni_photo" accept="image/*" required><br><br>
+
+                    <!-- Nueva sección para comunidad y provincia -->
+                    <label for="comunidad">Comunidad Autónoma:</label><br>
+                    <select id="comunidad" name="comunidad" required>
+                        <option value="">Selecciona una comunidad</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Cataluña">Cataluña</option>
+                        <option value="Andalucía">Andalucía</option>
+                        <option value="Valencia">Comunidad Valenciana</option>
+                        <option value="Galicia">Galicia</option>
+                    </select><br><br>
+
+                    <label for="provincia">Provincia:</label><br>
+                    <select id="provincia" name="provincia" required>
+                        <option value="">Selecciona una provincia</option>
+                    </select><br><br>
+
                     <input type="submit" value="Sign in">
                     <input type="reset" value="Reset all fields">
                 </fieldset>
             </form>
             <fieldset>
-            <legend>Already signed in?</legend><br>
-            <button type="button" onclick="location.href='#login'">Log in instead</button>
-            <button type="button" onclick="location.href='#home'">Go to Main Page</button>
+            <legend>Ya tienes cuenta?</legend><br>
+            <button type="button" onclick="location.href='#login'">Iniciar sesión</button>
+            <button type="button" onclick="location.href='#home'">Página principal</button>
             </fieldset>
         </main>
         <footer></footer>
