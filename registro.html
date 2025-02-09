@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos y Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="functions.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <a href="main.html" class="logo">M&P</a>
+            <a href="#">Products</a>
+            <a href="login.html">Login</a>
+            <form class="search-bar" onsubmit="redirectToResults(event)">
+                <input type="text" id="search" placeholder="Buscar..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="#">Vender</a>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+    
+    <main class="form-container">
+        <div class="form-container">
+            <form id="sign_in_form" class="form-box">
+
+                <h2>Registro de usuario</h2>
+                <div class="input-group">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Jorge Enebral" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate">Día de nacimiento</label>
+                    <input type="date" id="birthdate" name="birthdate" class="form-input" required>
+                    <p id="birthdate_error_message" class="error-message" style="display: none;"></p>
+                </div>
+                <div class="input-group">
+                    <label for="email" >E-mail</label>
+                    <input type="text" id="email" name="email" class="form-input" pattern="^[a-zA-Z0-9\._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required placeholder="yourmail@mail.com">
+                </div>
+                <div class="input-group">
+                    <label for="pword" class="form-label">Contraseña</label>
+                    <input type="password" id="pword" name="pword" class="form-input" required placeholder="SafePassword1234">
+                    <span id="togglePword" class="toggle-password" onclick="togglePasswordVisibility('pword', 'togglePword')">👁️</span>
+                </div>
+                <div class="input-group">
+                    <label for="confirmpword" class="form-label">Confirmar contraseña</label>
+                    <input type="password" id="confirmpword" name="confirmpword" class="form-input" required placeholder="SafePassword1234">
+                    <span id="toggleConfPword" class="toggle-password" onclick="togglePasswordVisibility('confirmpword', 'toggleConfPword')">👁️</span>
+        
+                    <p id="error_message" class="error-message" style="display: none;">Las contraseñas no encajan</p>
+                </div>
+                <div class="input-group">
+                    <!-- Nueva sección para el DNI -->
+                    <label for="dni_photo" class="form-label">Sube una foto de tu DNI:</label>
+                    <input type="file" id="dni_photo" name="dni_photo" class="form-input" accept="image/*" required>
+                </div>
+                <div class="input-group">
+                    <!-- Nueva sección para comunidad y provincia -->
+                    <label for="comunidad" class="form-label">Comunidad Autónoma:</label>
+                    <select id="comunidad" name="comunidad" class="form-input" required>
+                        <option value="">Selecciona una comunidad</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Cataluña">Cataluña</option>
+                        <option value="Andalucía">Andalucía</option>
+                        <option value="Valencia">Comunidad Valenciana</option>
+                        <option value="Galicia">Galicia</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="provincia" class="form-label">Provincia:</label>
+                    <select id="provincia" name="provincia" class="form-input" required>
+                        <option value="">Selecciona una provincia</option>
+                    </select>
+                </div>
+                
+                    <button type="submit"  class="form-button">Sign in</button>
+                    <button type="reset"  class="form-button">Borrar datos</button>
+                <br>
+                    <legend>¿Ya tienes cuenta?</legend>
+                    <button type="button" class="form-button" onclick="location.href='login.html'">Iniciar sesión</button>
+                    <button type="button" class="form-button" onclick="location.href='main.html'">Página principal</button>
+                
+            </form>
+        </div>
+    </main>
+    
+    
+    
+
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Sobre la empresa</a>
+            <a href="#">Contacta con nosotros</a>
+        </div>
+        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
+    </footer>
+</body>
+</html>
