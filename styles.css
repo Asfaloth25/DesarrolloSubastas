@@ -1,0 +1,313 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #2C2F38;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #00AFC1;
+    padding: 10px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF5A1F;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+nav a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #FF5A1F;
+}
+input {
+    flex-grow: 1;
+    border-radius: 5px;
+    border: none;
+    margin: 4px;
+}
+.cart-icon {
+    margin-left: 10px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.314);
+}
+main h1, main h2 {
+    color: white;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    background-color: #00AFC1;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.item:hover {
+    background-color: #008599;
+}
+.fire-icon {
+    font-size: 29px;
+    position: absolute;
+    left: -12px;
+    top: -12px;
+}
+img {
+    width:200px;
+    height:200px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.info {
+    flex-grow: 1;
+}
+
+.more-information {
+    flex: 1;
+    text-align: left;  
+    color: white;
+}
+
+button {
+    background-color: #FF5A1F;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #cc4717;
+}
+footer {
+    background-color: #FF5A1F;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    position: relative;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-links a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    background-color: #00AFC1;
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-btn {
+    background-color: #FFA500;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #CC8400;
+}
+
+
+.img-info{
+    width:300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.item-info{
+    display: flex;
+    align-items: center;
+    background-color: #00AFC1;
+    padding: 10px;
+    border-radius: 10px;
+    height: 315px;
+    width: 1350px;
+    position: relative;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+
+
+.description {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;  
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    margin: 10px 0;
+    width: 97%;
+}
+
+.red-line {
+    border: none;
+    height: 2px;
+    background-color: #FF5A1F; 
+    margin: 10px 0;
+    width: 99%;
+}
+
+.total-bidders {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.search-bar input[type="text"] {
+    width: 900px; 
+    padding: 5px;
+    font-size: 16px;
+}
+
+.container {
+    flex: 1;  
+    display: flex;
+    flex-direction: column;
+}
+
+.auction-container{
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    align-items: center;
+}
+
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.form-box {
+    background-color: #00AFC1;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 12px;
+    margin-right: 30px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-text {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.form-text a {
+    color: white;
+}
+
+
+
+select {
+    width: 105%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+
+

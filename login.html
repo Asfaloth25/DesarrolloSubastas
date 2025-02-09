@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos y Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="functions.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <a href="main.html" class="logo">M&P</a>
+            <a href="#">Products</a>
+            <a href="login.html">Login</a>
+            <form class="search-bar" onsubmit="redirectToResults(event)">
+                <input type="text" id="search" placeholder="Buscar..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="#">Vender</a>
+            <div class="cart-icon">🛒</div>
+        </nav>
+    </header>
+    
+    <main class="form-container">
+        <div class="form-container">
+            <form class="form-box">
+                <h2>Iniciar sesión</h2>
+                
+                <div class="input-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Introduce tu usuario" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Introduce tu contraseña" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Entrar</button>
+                <p class="form-text">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </main>
+
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Sobre la empresa</a>
+            <a href="#">Contacta con nosotros</a>
+        </div>
+        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
+    </footer>
+</body>
+</html>
