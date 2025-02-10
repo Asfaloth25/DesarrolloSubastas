@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const provincias = {
         Madrid: ["Madrid", "Alcalá de Henares", "Móstoles"],
-        Cataluña: ["Barcelona", "Girona", "Tarragona"],
+        Cataluña: ["Barcelona", "Gerona", "Tarragona"],
         Andalucía: ["Sevilla", "Granada", "Málaga"],
-        "Comunidad Valenciana": ["Valencia", "Alicante", "Castellón"],
+        "Comunidad_Valenciana": ["Valencia", "Alicante", "Castellón"],
         Galicia: ["A Coruña", "Pontevedra", "Lugo"]
     };
 
