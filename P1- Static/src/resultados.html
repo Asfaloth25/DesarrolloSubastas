@@ -13,7 +13,7 @@
     <div class="container">
     <header>
         <nav>
-            <a href="main.html" class="logo">M&P</a>
+            <a href="index.html" class="logo">M&P</a>
             <a href="#">Products</a>
             <a href="login.html">Login</a>
             <form class="search-bar" onsubmit="redirectToResults(event)">
@@ -26,27 +26,10 @@
     </header>
     
     <main>
-        <h2>Información sobre este producto:</h2>
-
-            <div class="item-info">
-                
-                <img class="img-info" src="silla.jpg" alt="Silla">
-                <div class="more-information">
-                    <h3>Vendo silla</h3>
-                    <p>Jorge Enebral</p>
-                    <div class="description">
-                        <p>Vendo esta silla porque compré muchas más de las necesarias. Me gustan las sillas. Está en perfectas condiciones para su uso.</p>
-                    </div>
-                    <hr class="red-line">
-                    <p class="total-bidders">Total de personas pujando: 3</p>
-                </div>
-                <div class="buttons">
-                    <button class="bid" onclick="placeBid('Silla')">Puja ya: 25$</button>
-                
-                </div>
-            </div>
+        <h1>Resultados de búsqueda</h1>
+        <div id="auction-results" class="auction-container">
             
-
+        </div>
     </main>
     </div>
     <footer>
@@ -56,6 +39,5 @@
         </div>
         <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
     </footer>
-    
 </body>
 </html>
