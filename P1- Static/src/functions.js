@@ -114,20 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Función de validación para la contraseña
-    function validatePassword() {
-        const passwordValue = password.value;
-        const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        if (!regex.test(passwordValue)) {
-            password.style.border = "2px solid red";
-            passwordError.textContent = "La contraseña tiene que tener al menos 8 caracteres, una mayúscula, un número y un carácter especial";
-            passwordError.style.display = "block";
-            return false;
-        } else {
-            password.style.border = "";
-            passwordError.style.display = "none";
-            return true;
-        }
-    }
+            
 
     function validateConfirmPassword() {
         if (password.value !== confirmPassword.value) {
