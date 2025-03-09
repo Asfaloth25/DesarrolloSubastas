@@ -1,95 +1,120 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+import React from "react";
+import "./globals.css";
+import SearchBar from "@/SearchBar";
+function App() {
 
-export default function Home() {
+  // Función para manejar la puja
+  const placeBid = (item) => {
+    alert(`Pujando por: ${item}`);
+  };
+
+  // Función para manejar la visualización de información
+  const viewInfo = (url) => {
+    // Redirigir a la URL de la información del artículo
+    window.location.href = url;
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container">
+      <header>
+        <nav>
+          <a href="/" className="logo">M&P</a>
+          <a href="#">Products</a>
+          <a href="/inicio">Login</a>
+          <SearchBar />
+          <a href="#">Vender</a>
+          <div className="cart-icon">🛒</div>
+        </nav>
+      </header>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <main>
+        <h1>MARCOS Y PEDRO</h1>
+        <h2>Lo están petando:</h2>
+        <div className="items">
+          {/* Item 1 */}
+          <div className="item">
+            <div className="fire-icon">🔥</div>
+            <img src="silla.jpg" alt="Silla" />
+            <div className="info">
+              <h3>Vendo silla</h3>
+              <p>Jorge Enebral</p>
+            </div>
+            <div className="buttons">
+              <button
+                className="bid"
+                onClick={() => placeBid("Silla")}
+              >
+                Puja ya: 25$
+              </button>
+              <button
+                className="info-btn"
+                onClick={() => viewInfo("silla-info")}
+              >
+                Ver información
+              </button>
+            </div>
+          </div>
+
+          {/* Item 2 */}
+          <div className="item">
+            <div className="fire-icon">🔥</div>
+            <img src="camiseta.jpg" alt="Camiseta" />
+            <div className="info">
+              <h3>Camiseta</h3>
+              <p>Mario Alonso</p>
+            </div>
+            <div className="buttons">
+              <button
+                className="bid"
+                onClick={() => placeBid("Camiseta")}
+              >
+                Puja ya: 50$
+              </button>
+              <button
+                className="info-btn"
+                onClick={() => viewInfo("camiseta-info")}
+              >
+                Ver información
+              </button>
+            </div>
+          </div>
+
+          {/* Item 3 */}
+          <div className="item">
+            <div className="fire-icon">🔥</div>
+            <img src="mesa.jpg" alt="Mesa" />
+            <div className="info">
+              <h3>Mesa</h3>
+              <p>Jorge Enebral</p>
+            </div>
+            <div className="buttons">
+              <button
+                className="bid"
+                onClick={() => placeBid("Mesa")}
+              >
+                Puja ya: 22$
+              </button>
+              <button
+                className="info-btn"
+                onClick={() => viewInfo("mesa-info")}
+              >
+                Ver información
+              </button>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer>
+        <div className="footer-links">
+          <a href="#">Sobre la empresa</a>
+          <a href="#">Contacta con nosotros</a>
+        </div>
+        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
       </footer>
     </div>
   );
 }
+
+export default App;
