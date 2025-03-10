@@ -1,22 +1,9 @@
 "use client"
 import React, { useState } from "react";
 import '../globals.css';
-import SearchBar from "@/SearchBar";
+import Header from "../Header";
+import Footer from "../Footer";
 
-function Header() {
-  return (
-    <header>
-      <nav>
-        <a href="/" className="logo">M&P</a>
-        <a href="#">Products</a>
-        <a href="/inicio">Login</a>
-        <SearchBar />
-        <a href="#">Vender</a>
-        <div className="cart-icon">🛒</div>
-      </nav>
-    </header>
-  );
-}
 
 function LoginForm() {
   const [usuario, setUsuario] = useState("");
@@ -76,13 +63,7 @@ function App() {
     <div className="container">
       <Header />
       <LoginForm />
-      <footer>
-        <div className="footer-links">
-          <a href="#">Sobre la empresa</a>
-          <a href="#">Contacta con nosotros</a>
-        </div>
-        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

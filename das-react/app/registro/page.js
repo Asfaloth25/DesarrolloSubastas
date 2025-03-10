@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
-import SearchBar from "@/SearchBar";
+import Header from "../Header";
+import Footer from "../Footer";
 
 
 const RegistroUsuario = () => {
@@ -29,17 +30,7 @@ const RegistroUsuario = () => {
 
   return (
     <div className="container">
-      <header>
-        <nav>
-          <a href="/" className="logo">M&P</a>
-          <a href="#">Products</a>
-          <a href="/inicio">Login</a>
-          <SearchBar />
-          <a href="#">Vender</a>
-          <div className="cart-icon">🛒</div>
-        </nav>
-      </header>
-
+      <Header/>
       <main className="form-container">
         <div className="form-container">
           <form id="sign_in_form" className="form-box" onSubmit={handleSubmit}>
@@ -112,13 +103,7 @@ const RegistroUsuario = () => {
         </div>
       </main>
 
-      <footer>
-        <div className="footer-links">
-          <a href="#">Sobre la empresa</a>
-          <a href="#">Contacta con nosotros</a>
-        </div>
-        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
-      </footer>
+      <Footer/>
     </div>
   );
 };

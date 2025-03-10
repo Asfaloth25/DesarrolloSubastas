@@ -1,7 +1,9 @@
 "use client"
 import React from "react";
 import "./globals.css";
-import SearchBar from "@/SearchBar";
+import Header from "./Header";
+import Footer from "./Footer";
+
 function App() {
 
   // Función para manejar la puja
@@ -17,17 +19,7 @@ function App() {
 
   return (
     <div className="container">
-      <header>
-        <nav>
-          <a href="/" className="logo">M&P</a>
-          <a href="#">Products</a>
-          <a href="/inicio">Login</a>
-          <SearchBar />
-          <a href="#">Vender</a>
-          <div className="cart-icon">🛒</div>
-        </nav>
-      </header>
-
+      <Header/>
       <main>
         <h1>MARCOS Y PEDRO</h1>
         <h2>Lo están petando:</h2>
@@ -106,13 +98,7 @@ function App() {
         </div>
       </main>
 
-      <footer>
-        <div className="footer-links">
-          <a href="#">Sobre la empresa</a>
-          <a href="#">Contacta con nosotros</a>
-        </div>
-        <p>Página web creada por Pedro Meseguer y Marcos Garrido</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
